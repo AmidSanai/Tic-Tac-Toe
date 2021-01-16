@@ -43,8 +43,10 @@ public class PlayerPlacement {
     public static void userChooser(String fpn) {
         if (fullPositionsNumber == 1 || fullPositionsNumber == 3 || fullPositionsNumber == 5 || fullPositionsNumber == 7) {
             theUser = "computer";
+            System.out.println(App.user2 + "'s turn");
         } else if (fullPositionsNumber == 0 || fullPositionsNumber == 2 || fullPositionsNumber == 4 || fullPositionsNumber == 6 || fullPositionsNumber == 8) {
             theUser = "player";
+            System.out.println(App.user1 + "'s turn");
         }
     }
 
