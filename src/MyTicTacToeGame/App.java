@@ -8,6 +8,7 @@ public class App {
     public static String user2 = "";
     public static int user1IsFull = 0;
     public static char[][] theGameBoard = {};
+
     public static void main(String[] args) {
         String modelOfGameBoard = "";
         //Model of the game Board
@@ -56,20 +57,14 @@ public class App {
     }
 
     public static void userName() {
-
-        if (user1IsFull == 0) {
-            System.out.println("Enter player one's name (X)...");
-            user1 = scan.next();
-            user1IsFull++;
-            System.out.println("Enter player two's name (O)...");
+        System.out.println("Enter first player's name (X)...");
+        user1 = scan.next();
+        boolean firstTime = true;
+        do {
+            String message = (firstTime) ? "Enter second player's name (O)..." : "This name is taken.please choose another one.";
+            System.out.println(message);
             user2 = scan.next();
-        }else {
-            System.out.println("Enter player two's name (O)...");
-            user2 = scan.next();
-        }
-        if (user2.equalsIgnoreCase(user1)) {
-            System.out.println("Please choose another name.this name is taken!");
-            userName();
-        }
+            firstTime = false;
+        } while (user1.equals(user2));
     }
 }
