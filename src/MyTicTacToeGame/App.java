@@ -6,7 +6,6 @@ public class App {
     public static Scanner scan = new Scanner(System.in);
     public static String user1 = "";
     public static String user2 = "";
-    public static int user1IsFull = 0;
     public static char[][] theGameBoard = {};
 
     public static void main(String[] args) {
