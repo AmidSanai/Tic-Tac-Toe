@@ -224,7 +224,7 @@ public class PlayerPlacement {
         if (yOrN.equalsIgnoreCase("yes")) {
             System.out.println("CAST:");
             System.out.println("Mamij");
-            System.out.println("Thank to:");
+            System.out.println("Thanks to:");
             System.out.println("Mamij");
             System.out.println("Animations(while there is no animation):");
             System.out.println("Mamij");
@@ -235,7 +235,7 @@ public class PlayerPlacement {
             for (int i = 0; i < 10; i++){
                 System.out.println();
             }
-            System.out.println("I'll show it anyway");
+            System.out.println("But i'll show it anyway");
             System.out.println("CAST:");
             System.out.println("Mamij");
             System.out.println("Thanks to:");
@@ -246,7 +246,6 @@ public class PlayerPlacement {
             System.out.println("Mamij");
         }else{
             System.out.println("I didn't understand what you said but i'll show it anyway");
-            System.out.println("I'll show it anyway");
             System.out.println("CAST:");
             System.out.println("Mamij");
             System.out.println("Thanks to:");

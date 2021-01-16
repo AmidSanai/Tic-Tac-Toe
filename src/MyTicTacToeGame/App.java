@@ -45,10 +45,10 @@ public class App {
         System.out.println();
         printGameBoard(PlayerPlacement.gameBoard2);
         System.out.println();
-        oneModelOfGameBoard = scan.next();
-        if (oneModelOfGameBoard.equalsIgnoreCase("number one") || oneModelOfGameBoard.equals("1") || oneModelOfGameBoard.equalsIgnoreCase("number 1")) {
+        oneModelOfGameBoard = scan.nextLine();
+        if (oneModelOfGameBoard.equalsIgnoreCase("number one") || oneModelOfGameBoard.equals("1") || oneModelOfGameBoard.equalsIgnoreCase("number 1") || oneModelOfGameBoard.equalsIgnoreCase("one")) {
             theGameBoard = PlayerPlacement.gameBoard1;
-        } else if (oneModelOfGameBoard.equalsIgnoreCase("number two") || oneModelOfGameBoard.equals("2") || oneModelOfGameBoard.equalsIgnoreCase("number 2")) {
+        } else if (oneModelOfGameBoard.equalsIgnoreCase("number two") || oneModelOfGameBoard.equals("2") || oneModelOfGameBoard.equalsIgnoreCase("number 2") || oneModelOfGameBoard.equalsIgnoreCase("two")) {
             theGameBoard = PlayerPlacement.gameBoard2;
         } else {
             System.out.println("please choose a number between 1 & 2");
@@ -58,12 +58,12 @@ public class App {
 
     public static void userName() {
         System.out.println("Enter first player's name (X)...");
-        user1 = scan.next();
+        user1 = scan.nextLine();
         boolean firstTime = true;
         do {
             String message = (firstTime) ? "Enter second player's name (O)..." : "This name is taken.please choose another one.";
             System.out.println(message);
-            user2 = scan.next();
+            user2 = scan.nextLine();
             firstTime = false;
         } while (user1.equals(user2));
     }
