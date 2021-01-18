@@ -1,5 +1,7 @@
 package MyTicTacToeGame;
 
+import java.lang.invoke.StringConcatException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class PlayerPlacement {
@@ -59,7 +61,19 @@ public class PlayerPlacement {
         } else if (user.equals("computer")) {
             symbol = 'O';
         }
-        position = scan.nextInt();
+        int notInt = 0, newInput = 0;
+        boolean isDone = true;
+        while (isDone) {
+            Scanner scan = new Scanner(System.in);
+            if (scan.hasNextInt()) {
+                position = scan.nextInt();
+                isDone = false;
+            } else {
+                System.out.println("ERROR:That is not a number");
+                System.out.println("please choose a number .");
+            }
+        }
+
         switch (position) {
             case 1:
                 if (one == 1) {
@@ -204,6 +218,7 @@ public class PlayerPlacement {
         App.printGameBoard(gameBoard);
     }
 
+
     public static void placePieceDoWhile(String theUser1, String theUser2, char[][] gameBoard) {
         do {
             placePiece(gameBoard, position, theUser);
@@ -230,9 +245,9 @@ public class PlayerPlacement {
             System.out.println("Mamij");
             System.out.println("Every other think you would expect:");
             System.out.println("Mamij");
-        }else if(yOrN.equalsIgnoreCase("no")){
+        } else if (yOrN.equalsIgnoreCase("no")) {
             System.out.println("Ok...");
-            for (int i = 0; i < 10; i++){
+            for (int i = 0; i < 10; i++) {
                 System.out.println();
             }
             System.out.println("But i'll show it anyway");
@@ -244,7 +259,7 @@ public class PlayerPlacement {
             System.out.println("Mamij");
             System.out.println("Every other think you would expect:");
             System.out.println("Mamij");
-        }else{
+        } else {
             System.out.println("I didn't understand what you said but i'll show it anyway");
             System.out.println("CAST:");
             System.out.println("Mamij");
