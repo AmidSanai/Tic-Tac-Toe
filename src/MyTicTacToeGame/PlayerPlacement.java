@@ -270,5 +270,6 @@ public class PlayerPlacement {
             System.out.println("Every other think you would expect:");
             System.out.println("Mamij");
         }
+        App.mamij = App.mamij + 9;
     }
 }

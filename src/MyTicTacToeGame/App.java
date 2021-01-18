@@ -12,23 +12,27 @@ public class App {
     public static void main(String[] args) {
         boolean yeaBoi = true;
         do {
-            String modelOfGameBoard = "";
-            //Model of the game Board
-            System.out.println("Which form of game board you want to use?");
-            System.out.println();
-            gameBoardChooser(modelOfGameBoard);
             if (mamij < 9) {
-                //user name
-                userName();
-                //Asking the user for where to put
-                System.out.println("Choose your placement by using numbers from 1 to 9:");
-                //printing the gameBoard
-                printGameBoard(theGameBoard);
-                int thePosition = PlayerPlacement.position;
-                //making the object of Placement
-                int position = PlayerPlacement.setPosition(thePosition);
-                PlayerPlacement.placePieceDoWhile(user1, user2, theGameBoard);
-            } else {
+                String modelOfGameBoard = "";
+                //Model of the game Board
+                System.out.println("Which form of game board you want to use?");
+                System.out.println();
+                gameBoardChooser(modelOfGameBoard);
+                if (mamij < 9) {
+                    //user name
+                    userName();
+                    //Asking the user for where to put
+                    System.out.println("Choose your placement by using numbers from 1 to 9:");
+                    //printing the gameBoard
+                    printGameBoard(theGameBoard);
+                    int thePosition = PlayerPlacement.position;
+                    //making the object of Placement
+                    int position = PlayerPlacement.setPosition(thePosition);
+                    PlayerPlacement.placePieceDoWhile(user1, user2, theGameBoard);
+                } else {
+                    yeaBoi = false;
+                }
+            }else{
                 yeaBoi = false;
             }
         } while (yeaBoi);
