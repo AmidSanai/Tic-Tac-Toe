@@ -81,11 +81,17 @@ public class App {
     public static void userName() {
         System.out.println("Enter first player's name (X)...");
         user1 = scan.nextLine();
+        if (user1.equalsIgnoreCase("abcdefghijklmnopqrstuvwxys")){
+            user1 = "alphabet";
+        }
         boolean firstTime = true;
         do {
             String message = (firstTime) ? "Enter second player's name (O)..." : "This name is taken.please choose another one.";
             System.out.println(message);
             user2 = scan.nextLine();
+            if (user2.equalsIgnoreCase("abcdefghijklmnopqrstuvwxys")){
+                user2 = "alphabet";
+            }
             firstTime = false;
         } while (user1.equals(user2));
     }
