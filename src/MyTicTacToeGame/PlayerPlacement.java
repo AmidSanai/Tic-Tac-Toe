@@ -1,7 +1,5 @@
 package MyTicTacToeGame;
 
-import java.lang.invoke.StringConcatException;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class PlayerPlacement {

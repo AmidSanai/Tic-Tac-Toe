@@ -10,7 +10,7 @@ public class App {
     public static int mamij = 0;
 
     public static void main(String[] args) {
-        boolean yeaBoi = true;
+        boolean yeaBoy = true;
         do {
             if (mamij < 9) {
                 String modelOfGameBoard = "";
@@ -30,12 +30,12 @@ public class App {
                     int position = PlayerPlacement.setPosition(thePosition);
                     PlayerPlacement.placePieceDoWhile(user1, user2, theGameBoard);
                 } else {
-                    yeaBoi = false;
+                    yeaBoy = false;
                 }
             }else{
-                yeaBoi = false;
+                yeaBoy = false;
             }
-        } while (yeaBoi);
+        } while (yeaBoy);
     }
 
     public static void printGameBoard(char[][] gameBoard) {
