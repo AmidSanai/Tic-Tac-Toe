@@ -66,10 +66,10 @@ public class App {
             mamij = mamij + 1;
             gameBoardChooser(oneModelOfGameBoard);
         } else if (mamij > 1 && oneModelOfGameBoard.equalsIgnoreCase("mamij")) {
-            System.out.println("I warned you before and you didn't listen so now get out of HERE");
+            System.out.println("I warned you before and you didn't listen,so now get out of HERE");
             mamij = mamij + 9;
         } else if (oneModelOfGameBoard.equalsIgnoreCase("mamij")) {
-            System.out.println("Oh...you know Mamij?sorry we can't talk about it HERE...anyway  you should choose a number between 1 & 2.");
+            System.out.println("Oh...you know Mamij?sorry we can't talk about it HERE...anyway you should choose a number between 1 & 2.");
             mamij = mamij + 1;
             gameBoardChooser(oneModelOfGameBoard);
         } else {
@@ -81,7 +81,7 @@ public class App {
     public static void userName() {
         System.out.println("Enter first player's name (X)...");
         user1 = scan.nextLine();
-        if (user1.equalsIgnoreCase("abcdefghijklmnopqrstuvwxys")){
+        if (user1.equalsIgnoreCase("abcdefghijklmnopqrstuvwxyz")){
             user1 = "alphabet";
         }
         boolean firstTime = true;
@@ -89,7 +89,7 @@ public class App {
             String message = (firstTime) ? "Enter second player's name (O)..." : "This name is taken.please choose another one.";
             System.out.println(message);
             user2 = scan.nextLine();
-            if (user2.equalsIgnoreCase("abcdefghijklmnopqrstuvwxys")){
+            if (user2.equalsIgnoreCase("abcdefghijklmnopqrstuvwxyz")){
                 user2 = "alphabet";
             }
             firstTime = false;
